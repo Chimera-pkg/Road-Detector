@@ -1,0 +1,32 @@
+[
+  {
+    "nomor": "1",
+    "file name": "0902211_R1",
+    "date": "12.Jan.2021",
+    "damage amount": 75.5
+  },
+  {
+    "nomor": "2",
+    "file name": "0902211_R1",
+    "date": "21.Feb.2021",
+    "damage amount": 35.4
+  },
+  {
+    "nomor": "3",
+    "file name": "0902211_R1",
+    "date": "13.Mar.2021",
+    "damage amount": 25
+  },
+  {
+    "nomor": "4",
+    "file name": "0902211_R1",
+    "date": "24.Jan.2021",
+    "damage amount": 100
+  },
+  {
+    "nomor": "5",
+    "file name": "0902211_R1",
+    "date": "Oct 24, 2022",
+    "damage amount": 75
+  }
+]
