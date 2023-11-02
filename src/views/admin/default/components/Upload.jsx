@@ -29,30 +29,18 @@ const Upload = () => {
   };
 
   const handleButtonClick = async () => {
-    let timerInterval
-
     setProcessing(true);
     Swal.fire({
-      title: 'Memproses File........',
-      html: 'Akan Tertutup Otomatis <b></b> milliseconds.',
-      timer: 300000,
-      timerProgressBar: true,
-      didOpen: () => {
-        Swal.showLoading()
-        const b = Swal.getHtmlContainer().querySelector('b')
-        timerInterval = setInterval(() => {
-          b.textContent = Swal.getTimerLeft()
-        }, 100)
+      title: "Memproses File.....(bisa tekan ok untuk lihat hasil pada halaman Result)  ",
+      allowOutsideClick: false,
+      onBeforeOpen: () => {
+        Swal.showLoading();
+        // Simulasikan proses pemrosesan selama 5 detik
+        setTimeout(() => {
+          setProcessing(false);
+        }, 5000); // 5000 milidetik = 5 detik
       },
-      willClose: () => {
-        clearInterval(timerInterval)
-      }
-    }).then((result) => {
-      /* Read more about handling dismissals below */
-      if (result.dismiss === Swal.DismissReason.timer) {
-        console.log('I was closed by the timer')
-      }
-    })
+    });
 
     // Mulai proses pemrosesan di sini
     try {

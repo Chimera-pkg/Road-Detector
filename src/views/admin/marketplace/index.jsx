@@ -36,10 +36,7 @@ const Marketplace = () => {
     }
   };
 
-  useEffect(() => {
-    fetchHistoryData(); // To initially fetch all history data
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [file]);
+ 
 
   // Calculate the totals for each type of damage
   useEffect(() => {

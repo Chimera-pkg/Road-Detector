@@ -6,7 +6,7 @@ const BuayaDetail = ({ title, value, extra }) => {
   const [heart, setHeart] = useState(true);
   return (
     <Card
-      extra={`bg-red-300 flex flex-row w-full h-full !p-4 3xl:p-![13px] bg-white ${extra}`}
+      extra={`bg-red-200 flex flex-row w-full h-full !p-4 3xl:p-![13px] bg-white ${extra}`}
     >
       <div
         className="rounded-[20px] bg-cover bg-center"

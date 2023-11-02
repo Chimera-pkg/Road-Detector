@@ -6,7 +6,7 @@ const MemanjangDetail = ({ title, value, extra }) => {
   const [heart, setHeart] = useState(true);
   return (
     <Card
-      extra={`bg-orange-300 flex flex-row w-full h-full !p-4 3xl:p-![13px] bg-white ${extra}`}
+      extra={`bg-orange-400 flex flex-row w-full h-full !p-4 3xl:p-![13px] bg-white ${extra}`}
     >
       <div
         className="rounded-[20px] bg-cover bg-center"

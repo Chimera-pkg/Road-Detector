@@ -6,7 +6,7 @@ const LubangDetail = ({ title, value, extra }) => {
   const [heart, setHeart] = useState(true);
   return (
     <Card
-      extra={`bg-red-1000 flex flex-row w-full h-full !p-4 3xl:p-![13px]  ${extra}`}
+      extra={`bg-red-600 flex flex-row w-full h-full !p-4 3xl:p-![13px]  ${extra}`}
     >
       <div
         className="rounded-[20px] bg-cover bg-center"
