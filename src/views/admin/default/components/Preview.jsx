@@ -5,7 +5,7 @@ const Preview = () => {
     const [files, setFiles] = useState([]);
     
     useEffect(() => {
-        axios.get('http://localhost:3001/uploads')
+        axios.get('https://rdd-api.x-camp.id/uploads')
           .then(response => {
             setFiles(response.data);
           })
@@ -20,7 +20,7 @@ const Preview = () => {
         <ul>
           {files.map((file) => (
             <li key={file.name}>
-              <a href={`http://localhost:3001/uploads/${file}`} target="file" rel="noopener noreferrer">
+              <a href={`https://rdd-api.x-camp.id/uploads/${file}`} target="file" rel="noopener noreferrer">
                 {file}
               </a>
             </li>

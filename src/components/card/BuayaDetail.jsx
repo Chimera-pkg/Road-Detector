@@ -5,9 +5,7 @@ import Card from "components/card";
 const BuayaDetail = ({ title, value, extra }) => {
   const [heart, setHeart] = useState(true);
   return (
-    <Card
-      extra={`bg-red-200 flex flex-row w-full h-full !p-4 3xl:p-![13px] bg-white ${extra}`}
-    >
+    
       <div
         className="rounded-[20px] bg-cover bg-center"
         style={{ backgroundImage: 'url("/bg4.png")' }}
@@ -23,7 +21,6 @@ const BuayaDetail = ({ title, value, extra }) => {
           </div>
         </div>
       </div>
-    </Card>
   );
 };
 

@@ -5,11 +5,8 @@ import Card from "components/card";
 const LubangDetail = ({ title, value, extra }) => {
   const [heart, setHeart] = useState(true);
   return (
-    <Card
-      extra={`bg-red-600 flex flex-row w-full h-full !p-4 3xl:p-![13px]  ${extra}`}
-    >
-      <div
-        className="rounded-[20px] bg-cover bg-center"
+    <div
+        className="rounded-[20px] bg-cover bg-center bg-red-600"
         style={{ backgroundImage: 'url("/bg1.png")' }}
       >
         <div className="flex lg:flex-row lg:justify-between">
@@ -22,8 +19,7 @@ const LubangDetail = ({ title, value, extra }) => {
             </p>
           </div>
         </div>
-      </div>
-    </Card>
+    </div>
   );
 };
 

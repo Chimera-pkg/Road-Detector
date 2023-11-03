@@ -5,9 +5,7 @@ import Card from "components/card";
 const MelintangDetail = ({ title, value, extra }) => {
   const [heart, setHeart] = useState(true);
   return (
-    <Card
-      extra={`bg-yellow-500 flex flex-row w-full h-full !p-4 3xl:p-![13px] bg-white ${extra}`}
-    >
+      
       <div
         className="rounded-[20px] bg-cover bg-center"
         style={{ backgroundImage: 'url("/bg3.png")' }}
@@ -23,7 +21,6 @@ const MelintangDetail = ({ title, value, extra }) => {
           </div>
         </div>
       </div>
-    </Card>
   );
 };
 

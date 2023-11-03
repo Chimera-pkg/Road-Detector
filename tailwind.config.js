@@ -152,7 +152,7 @@ module.exports = {
         900: "#1b2559",
       },
       navy: {
-        50: "#d0dcfb",
+        50: "#1b3bbb",
         100: "#aac0fe",
         200: "#a3b9f8",
         300: "#728fea",

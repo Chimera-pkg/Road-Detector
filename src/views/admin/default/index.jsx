@@ -30,8 +30,8 @@ const Dashboard = () => {
   const fetchHistoryData = async (fileName) => {
     try {
       const url = fileName
-        ? `http://localhost:3001/history?fileName=${fileName}`
-        : "http://localhost:3001/history";
+        ? `https://rdd-api.x-camp.id/history?fileName=${fileName}`
+        : "https://rdd-api.x-camp.id/history";
 
       const response = await fetch(url);
       const data = await response.json();
