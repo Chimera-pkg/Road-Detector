@@ -55,8 +55,11 @@ const ColumnsTable = (props) => {
   const fetchHistoryData = async () => {
     try {
       const url = file
-        ? `https://rdd-api.x-camp.id/get-history?fileName=${file}`
-        : "https://rdd-api.x-camp.id/get-history";
+        // ? `https://rdd-api.x-camp.id/get-history?fileName=${file}`
+        // : "https://rdd-api.x-camp.id/get-history";
+
+        ? `http://localhost:3001/get-history?fileName=${file}`
+        : "http://localhost:3001/get-history";
       console.log(url);
       const response = await fetch(url);
       const data = await response.json();
