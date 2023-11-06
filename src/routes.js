@@ -3,20 +3,14 @@ import React from "react";
 // Admin Imports
 import MainDashboard from "views/admin/default";
 import NFTMarketplace from "views/admin/marketplace";
-import DataTables from "views/admin/tables";
 
 // Auth Imports
-import SignIn from "views/auth/SignIn";
 
 // Icon Imports
 import {
   MdHome,
-  MdOutlineShoppingCart,
-  MdBarChart,
-  MdPerson,
-  MdLock,
+  
   MdShowChart,
-  MdDetails,
 } from "react-icons/md";
 
 const routes = [
