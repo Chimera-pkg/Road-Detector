@@ -3,10 +3,13 @@ import "./login.css";
 import React from 'react';
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
+import { Link} from "react-router-dom";
+
 
 import axios from "axios";
 import baseUrl from './config.jsx';
 
+import Cookies from 'js-cookie';
 
 export const LoginPage = () =>{
     
@@ -118,8 +121,10 @@ export const LoginPage = () =>{
                             </div>
                             
                             <div className="buttonSubmit">
-                                {!loading && <button type="submit" className="subButLog">Login</button>}
-                                {loading && <button type="submit" className="subButLog"><div className="loaderLogin"></div></button>}
+                                <Link to="/" className="backLoginReg">Login</Link>
+                                 
+                                {/* {!loading && <button type="submit" className="subButLog">Login</button>} */}
+                                {/* {loading && <button type="submit" className="subButLog"><div className="loaderLogin"></div></button>} */}
                             </div>
                             
                         </form>
