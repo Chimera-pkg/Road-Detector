@@ -17,21 +17,24 @@ const Upload = () => {
   const handleUpload = () => {
     const formData = new FormData();
     formData.append("file", file, file.name);
-      axios.post('https://roads-404204.et.r.appspot.com/upload', formData).then((res) => {
-      setUploadedImage(res.data.imageUrl);
-      setFiles([...files, file]);
-      Swal.fire({
-        icon: "success",
-        title: "Sukses!",
-        text: "Gambar berhasil diunggah!",
+    axios
+      .post("https://roads-404204.et.r.appspot.com/upload", formData)
+      .then((res) => {
+        setUploadedImage(res.data.url);
+        setFiles([...files, file]);
+        Swal.fire({
+          icon: "success",
+          title: "Sukses!",
+          text: "Gambar berhasil diunggah!",
+        });
       });
-    });
   };
 
   const handleButtonClick = async () => {
     setProcessing(true);
     Swal.fire({
-      title: "Memproses File.....(bisa tekan ok untuk lihat hasil pada halaman Result)  ",
+      title:
+        "Memproses File.....(bisa tekan ok untuk lihat hasil pada halaman Result)  ",
       allowOutsideClick: false,
       onBeforeOpen: () => {
         Swal.showLoading();
@@ -45,12 +48,14 @@ const Upload = () => {
     // Mulai proses pemrosesan di sini
     try {
       // const response = await axios.get("http://localhost:3001/start-detection", {
-        const response = await axios.get("https://rdd-api.x-camp.id/start-detection", {
-          
-        params: {
-          fileName: file.name, // Pass the fileName in the URL query string
-        },
-      });
+      const response = await axios.get(
+        "https://rdd-api.x-camp.id/start-detection",
+        {
+          params: {
+            fileName: file.name, // Pass the fileName in the URL query string
+          },
+        }
+      );
 
       Swal.close();
       setProcessing(false);
@@ -80,7 +85,7 @@ const Upload = () => {
         </h1>
         <div className="ml-12">
           <input
-            className="mt-5 w-full rounded-md border border-gray-300 bg-white py-2 px-4 text-gray-800 hover:border-gray-500 focus:border-blue-300 focus:outline-none focus:ring dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200"
+            className="mt-5 w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-800 hover:border-gray-500 focus:border-blue-300 focus:outline-none focus:ring dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200"
             type="file"
             onChange={(e) => handleFileChange(e)}
           />
@@ -99,7 +104,7 @@ const Upload = () => {
             <h2>Gambar Telah Diunggah:</h2>
             <img src={uploadedImage} alt="Uploaded" className="mt-2" />
           </div>
-      )}
+        )}
 
         {/* Tombol Start */}
         <div>
