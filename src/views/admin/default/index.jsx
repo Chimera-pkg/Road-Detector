@@ -31,13 +31,12 @@ const Dashboard = () => {
   const fetchHistoryData = async (fileName) => {
     try {
       const url = fileName
-        ? `https://rdd-backend.x-camp.id/history?fileName=${fileName}`
-        : "https://rdd-backend.x-camp.id/history";
-        
-        // ? `http://localhost:3001/history?fileName=${fileName}`
-        // : 'http://localhost:3001/history';
-        // harus diganti database
+        ? `https://testingapirdd.x-camp.id/history?fileName=${fileName}`
+        : "https://testingapirdd.x-camp.id/history";
 
+      // ? `http://localhost:3001/history?fileName=${fileName}`
+      // : 'http://localhost:3001/history';
+      // harus diganti database
 
       const response = await fetch(url);
       const data = await response.json();
@@ -49,18 +48,18 @@ const Dashboard = () => {
     }
   };
   useEffect(() => {
-    const isFirstVisit = localStorage.getItem('isFirstVisit');
+    const isFirstVisit = localStorage.getItem("isFirstVisit");
 
-      // Tampilkan swal peringatan saat pengguna pertama kali mengakses halaman /admin
-      Swal.fire({
-        title: 'Selamat Datang!',
-        text: 'Ini adalah halaman dengan Fitur Gratis, Apabila anda tertarik silahkan hubungi X-Camp',
-        icon: 'success',
-        confirmButtonText: 'Oke'
-      });
+    // Tampilkan swal peringatan saat pengguna pertama kali mengakses halaman /admin
+    Swal.fire({
+      title: "Selamat Datang!",
+      text: "Ini adalah halaman dengan Fitur Gratis, Apabila anda tertarik silahkan hubungi X-Camp",
+      icon: "success",
+      confirmButtonText: "Oke",
+    });
 
-      // Tandai bahwa pengguna telah mengunjungi halaman /admin
-      localStorage.setItem('isFirstVisit', 'true');
+    // Tandai bahwa pengguna telah mengunjungi halaman /admin
+    localStorage.setItem("isFirstVisit", "true");
   }, []);
   useEffect(() => {
     fetchHistoryData(); // To initially fetch all history data

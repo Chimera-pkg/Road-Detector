@@ -25,8 +25,8 @@ const Marketplace = () => {
   const fetchHistoryData = async () => {
     try {
       const url = file
-      ? `https://rdd-backend.x-camp.id/history?fileName=${fileName}`
-      : "https://rdd-backend.x-camp.id/history";
+        ? `https://testingapirdd.x-camp.id/history?fileName=${fileName}`
+        : "https://testingapirdd.x-camp.id/history";
       console.log(url);
       const response = await fetch(url);
       const data = await response.json();
@@ -35,8 +35,6 @@ const Marketplace = () => {
       console.error("Error fetching history data:", error);
     }
   };
-
- 
 
   // Calculate the totals for each type of damage
   useEffect(() => {
