@@ -49,7 +49,7 @@ const Upload = () => {
     try {
       // const response = await axios.get("http://localhost:3001/start-detection", {
       const response = await axios.get(
-        "https://rdd-api.x-camp.id/start-detection",
+        "https://testingapirdd.x-camp.id/start-detection",
         {
           params: {
             fileName: file.name, // Pass the fileName in the URL query string
