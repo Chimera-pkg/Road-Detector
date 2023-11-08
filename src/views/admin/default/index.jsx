@@ -17,6 +17,7 @@ import tableDataColumns from "./variables/tableDataColumns.json";
 import ColumnsTable from "./components/ColumnsTable";
 import DailyTraffic from "views/admin/default/components/DailyTraffic";
 
+import Swal from "sweetalert2";
 import React, { useState, useEffect } from "react";
 
 const Dashboard = () => {
@@ -30,11 +31,12 @@ const Dashboard = () => {
   const fetchHistoryData = async (fileName) => {
     try {
       const url = fileName
-        // ? `https://rdd-api.x-camp.id/history?fileName=${fileName}`
-        // : "https://rdd-api.x-camp.id/history";
+        ? `https://rdd-backend.x-camp.id/history?fileName=${fileName}`
+        : "https://rdd-backend.x-camp.id/history";
         
-        ? `http://localhost:3001/history?fileName=${fileName}`
-        : "http://localhost:3001/history";
+        // ? `http://localhost:3001/history?fileName=${fileName}`
+        // : 'http://localhost:3001/history';
+        // harus diganti database
 
 
       const response = await fetch(url);
@@ -46,7 +48,20 @@ const Dashboard = () => {
       setDataLoaded(true); // Indicate that data is loaded
     }
   };
+  useEffect(() => {
+    const isFirstVisit = localStorage.getItem('isFirstVisit');
 
+      // Tampilkan swal peringatan saat pengguna pertama kali mengakses halaman /admin
+      Swal.fire({
+        title: 'Selamat Datang!',
+        text: 'Ini adalah halaman dengan Fitur Gratis, Apabila anda tertarik silahkan hubungi X-Camp',
+        icon: 'success',
+        confirmButtonText: 'Oke'
+      });
+
+      // Tandai bahwa pengguna telah mengunjungi halaman /admin
+      localStorage.setItem('isFirstVisit', 'true');
+  }, []);
   useEffect(() => {
     fetchHistoryData(); // To initially fetch all history data
   }, []);

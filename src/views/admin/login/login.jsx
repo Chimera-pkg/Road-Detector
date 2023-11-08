@@ -9,7 +9,7 @@ import { Link} from "react-router-dom";
 import axios from "axios";
 import baseUrl from './config.jsx';
 
-import Cookies from 'js-cookie';
+
 
 export const LoginPage = () =>{
     
@@ -49,13 +49,13 @@ export const LoginPage = () =>{
             // set initial session storage
             sessionStorage.setItem('userData', 'true');
 
-	    const response = await axios.get(`${baseUrl}/token`,{withCredentials: true});
-            const decode = jwt_decode(response.data.accessToken);
-                const refreshToken = response.data.refreshToken;
+	    // const response = await axios.get(`${baseUrl}/token`,{withCredentials: true});
+        //     const decode = jwt_decode(response.data.accessToken);
+        //         const refreshToken = response.data.refreshToken;
 
-                Cookies.set('refreshToken', response.data.refreshToken, { secure: true });
-                    sessionStorage.setItem('userData', JSON.stringify(decode));
-                document.cookie = `refreshToken=${refreshToken}`;
+        //         Cookies.set('refreshToken', response.data.refreshToken, { secure: true });
+        //             sessionStorage.setItem('userData', JSON.stringify(decode));
+        //         document.cookie = `refreshToken=${refreshToken}`;
 
 
             // move to dashboard
@@ -121,10 +121,9 @@ export const LoginPage = () =>{
                             </div>
                             
                             <div className="buttonSubmit">
-                                <Link to="/" className="backLoginReg">Login</Link>
-                                 
-                                {/* {!loading && <button type="submit" className="subButLog">Login</button>} */}
-                                {/* {loading && <button type="submit" className="subButLog"><div className="loaderLogin"></div></button>} */}
+                                {/* <Link to="/admin" className="backLoginReg">Login</Link> */}
+                                {!loading && <button type="submit" className="subButLog">Login</button>}
+                                {loading && <button type="submit" className="subButLog"><div className="loaderLogin"></div></button>}
                             </div>
                             
                         </form>

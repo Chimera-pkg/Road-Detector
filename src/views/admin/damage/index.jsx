@@ -25,8 +25,8 @@ const Marketplace = () => {
   const fetchHistoryData = async () => {
     try {
       const url = file
-      ? `https://rdd-backend.x-camp.id/history?fileName=${fileName}`
-      : "https://rdd-backend.x-camp.id/history";
+        ? `https:/localhost3001/get-history?fileName=${file}`
+        : "https:/localhost3001/get-history";
       console.log(url);
       const response = await fetch(url);
       const data = await response.json();
@@ -68,6 +68,18 @@ const Marketplace = () => {
     <div className="mt-5">
       <div>
         {/* Jumlah lubang card */}
+        <div className="grid gap-10 md:grid-cols-4">
+          <LubangDetail title="Lubang" value={totalLubang} />
+          <MemanjangDetail
+            title="Retak Memanjang"
+            value={totalRetakMelintang}
+          />
+          <MelintangDetail
+            title="Retak Melintang"
+            value={totalRetakMemanjang}
+          />
+          <BuayaDetail title="Retak Buaya" value={totalRetakBuaya} />
+        </div>
         <div className="mt-10  grid-cols-2 gap-5">
           <ColumnsTable
             className="h-full w-full"

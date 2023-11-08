@@ -17,8 +17,7 @@ const Upload = () => {
   const handleUpload = () => {
     const formData = new FormData();
     formData.append("file", file, file.name);
-    axios.post("http://localhost:3001/upload", formData).then((res) => {
-      // axios.post("https://rdd-api.x-camp.id/upload", formData).then((res) => {
+      axios.post('https://roads-404204.et.r.appspot.com/upload', formData).then((res) => {
       setUploadedImage(res.data.imageUrl);
       setFiles([...files, file]);
       Swal.fire({
@@ -45,8 +44,9 @@ const Upload = () => {
 
     // Mulai proses pemrosesan di sini
     try {
-      const response = await axios.get("http://localhost:3001/start-detection", {
-        // const response = await axios.get("https://rdd-api.x-camp.id/start-detection", {
+      // const response = await axios.get("http://localhost:3001/start-detection", {
+        const response = await axios.get("https://rdd-api.x-camp.id/start-detection", {
+          
         params: {
           fileName: file.name, // Pass the fileName in the URL query string
         },
@@ -99,7 +99,7 @@ const Upload = () => {
             <h2>Gambar Telah Diunggah:</h2>
             <img src={uploadedImage} alt="Uploaded" className="mt-2" />
           </div>
-        )}
+      )}
 
         {/* Tombol Start */}
         <div>

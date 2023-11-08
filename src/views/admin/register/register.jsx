@@ -110,9 +110,10 @@ export const Register = () =>{
                             </div>
 
                             <div className="buttonSubmitReg">
-                                {!loading && <button type="submit" className="subButReg">Submit</button>}
+                                {!loading && <button type="submit" className="subButReg mr-3">Submit</button>}
                                 {loading && <button type="submit" className="subButReg"><div className="loaderReg"></div></button>}
-                                <Link to="/" className="backLoginReg">Login</Link>
+                                <h1 className="mt-5 font-bold py-1">ATAU</h1>
+                                <Link to="/admin" className="backLoginReg ml-5">Coba Gratis</Link>
                             </div>
                             
                         </form>

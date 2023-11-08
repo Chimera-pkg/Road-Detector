@@ -183,7 +183,7 @@ const Navbar = (props) => {
 
               <div className="flex flex-col p-2">
                 <a
-                  href=" "
+                  href="/login"
                   className=" text-sm font-medium text-red-500 hover:text-red-500"
                 >
                   Log Out

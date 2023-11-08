@@ -147,43 +147,20 @@ const ColumnsTable = (props) => {
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  Lubang
+                  jalan.jpg
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  {totalLubang}%
+                2023-11-01 18:49:45
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={beforeDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={beforeDetection}
-                    alt="Before Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+                {/* {totalLubang} */}
+                10
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={afterDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={afterDetection}
-                    alt="After Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+                
               </td>
             </tr>
             <tr>
@@ -194,43 +171,19 @@ const ColumnsTable = (props) => {
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  Retak Memanjang
+                  jalan2.jpeg
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  {totalRetakMemanjang}%
+                2023-11-01 18:30:56
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={beforeDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={beforeDetection}
-                    alt="Before Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+                4
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={afterDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={afterDetection}
-                    alt="After Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+                
               </td>
             </tr>
             <tr>
@@ -241,43 +194,20 @@ const ColumnsTable = (props) => {
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  Retak Melintang
+                  Sumatra.mp4
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  {totalRetakMelintang}%
+                  {/* {totalRetakMelintang} */}
+                  2023-11-01 21:34:14
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={beforeDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={beforeDetection}
-                    alt="Before Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+                24
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={afterDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={afterDetection}
-                    alt="After Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+               
               </td>
             </tr>
             <tr>
@@ -288,43 +218,20 @@ const ColumnsTable = (props) => {
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  Retak Buaya
+                  Lampung.mp4
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
-                  {totalRetakBuaya}%
+                  {/* {totalRetakBuaya} */}
+                  2023-11-01 18:29:43
                 </p>
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={beforeDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={beforeDetection}
-                    alt="Before Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+                44
               </td>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
-                {isVideo && (
-                  <video width="150" height="240" controls>
-                    <source src={afterDetection} type="video/mp4" />
-                  </video>
-                )}
-                {!isVideo && (
-                  <img
-                    src={afterDetection}
-                    alt="After Detection"
-                    width="150"
-                    height="240"
-                  />
-                )}
+                
               </td>
             </tr>
           </tbody>

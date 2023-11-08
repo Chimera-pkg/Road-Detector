@@ -3,19 +3,23 @@ import React from "react";
 // Admin Imports
 import MainDashboard from "views/admin/default";
 import NFTMarketplace from "views/admin/marketplace";
+import HistoryLog from "views/admin/history";
+import Damage from "views/admin/damage";
 
 // Auth Imports
 
 // Icon Imports
 import {
+  MdHistory,
   MdHome,
-  
+  MdMonitor,
+  MdOutlineShowChart,
   MdShowChart,
 } from "react-icons/md";
 
 const routes = [
   {
-    name: "Main Dashboard",
+    name: "Dashboard",
     layout: "/admin",
     path: "default",
     icon: <MdHome className="h-6 w-6" />,
@@ -23,19 +27,21 @@ const routes = [
   },
   {
     name: "Result",
-    layout: "/admin",
+    layout: '/admin',
     path: "damage-list",
-    icon: <MdShowChart className="h-6 w-6" />,
-    component: <NFTMarketplace />,
+    icon: <MdMonitor className="h-6 w-6" />,
+    component: <Damage/>,
     secondary: true,
   },
-  // {
-  //   name: "Detail",
-  //   layout: "/admin",
-  //   path: "detail",
-  //   icon: <MdDetails className="h-6 w-6" />,
-  //   component: <DataTables/>,
-  //   secondary: true,
-  // },
+
+  {
+    name: "History Log",
+    layout: "/admin",
+    path: "history",
+    icon: <MdHistory className="h-6 w-6" />,
+    component: <HistoryLog />,
+    secondary: true,
+  },
+
 ];
 export default routes;

@@ -1,0 +1,30 @@
+[
+  {
+    "nomor": "1",
+    "type": "Lubang",
+    "before detection": "",
+    "after detection": "12.Jan.2021",
+    "confidence": 75.6
+  },
+  {
+    "nomor": "2",
+    "type": "Retak Buaya",
+    "before detection": 1485,
+    "after detection": "21.Feb.2021",
+    "confidence": 35.4
+  },
+  {
+    "nomor": "3",
+    "type": "Retak Memanjang",
+    "before detection": 1024,
+    "after detection": "13.Mar.2021",
+    "confidence": 25
+  },
+  {
+    "nomor": "4",
+    "type": "Retak Melintang",
+    "before detection": 858,
+    "after detection": "24.Jan.2021",
+    "confidence": 100
+  }
+]

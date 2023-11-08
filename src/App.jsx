@@ -13,10 +13,9 @@ const App = () => {
     <Routes>
       <Route path="/admin*" element={<AdminLayout />} />
       <Route path="rtl/*" element={<RtlLayout />} />
-      <Route path="/" element={<Navigate to="/admin" replace />} />
+      <Route path="/" element={<Navigate to="/login" replace />} />
       <Route path="login/*" element={<LoginPage />} />
       <Route path="register/*" element={<Register />} />
-      <Route path="damage-list/*" element={<RtlLayout />} />
     </Routes>
   );
 };

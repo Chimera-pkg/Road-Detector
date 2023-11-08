@@ -114,7 +114,7 @@ const ColumnsTable = (props) => {
     <Card extra={"w-full pb-10 p-4 h-full"}>
       <header className="relative flex items-center justify-between">
         <div className="text-[30px] font-bold text-navy-700 dark:text-white">
-          Overview
+          Hasil Pemindaian
         </div>
         <CardMenu />
       </header>
@@ -139,7 +139,7 @@ const ColumnsTable = (props) => {
             ))}
           </thead>
           <tbody {...getTableBodyProps()}>
-             <tr>
+            <tr>
               <td className="pt-[10px] pb-[20px] sm:text-[14px]">
                 <p className="text-sm font-bold text-navy-700 dark:text-white">
                   1
