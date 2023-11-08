@@ -47,23 +47,27 @@ const Upload = () => {
 
     // Mulai proses pemrosesan di sini
     try {
-      // const response = await axios.get("http://localhost:3001/start-detection", {
-      const response = await axios.get(
-        "https://testingapirdd.x-camp.id/start-detection",
-        {
-          params: {
-            fileName: file.name, // Pass the fileName in the URL query string
-          },
-        }
-      );
+      const formData = new FormData();
+      formData.append("fileName", file.name);
 
-      Swal.close();
-      setProcessing(false);
-      // Handle the response here if needed
-      window.location.href = "/admin/damage-list?file=" + file.name;
-      console.log(response.data);
-      const data = response.data;
-      console.log(data); // Respon dari server
+      axios
+        .get("https://testingapirdd.x-camp.id/start-detection", {
+          params: {
+            fileName: file.name, // Pass the fileName in the query parameters
+          },
+        })
+        .then((res) => {
+          const data = res.data;
+          console.log(data);
+          Swal.close();
+          setProcessing(false);
+
+          // Handle the response here if needed
+          window.location.href = "/admin/damage-list?file=" + file.name;
+        })
+        .catch((error) => {
+          console.error("Error in /start-detection:", error);
+        });
     } catch (error) {
       console.error("Error:", error);
     }
