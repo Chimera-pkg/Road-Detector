@@ -55,11 +55,11 @@ const ColumnsTable = (props) => {
   const fetchHistoryData = async () => {
     try {
       const url = file
-        // ? `https://rdd-api.x-camp.id/get-history?fileName=${file}`
-        // : "https://rdd-api.x-camp.id/get-history";
+        ? // ? `https://rdd-api.x-camp.id/get-history?fileName=${file}`
+          // : "https://rdd-api.x-camp.id/get-history";
 
-        ? `http://localhost:3001/get-history?fileName=${file}`
-        : "http://localhost:3001/get-history";
+          `https://testingapirdd.x-camp.id/get-history?fileName=${file}`
+        : "https://testingapirdd.x-camp.id/get-history";
       console.log(url);
       const response = await fetch(url);
       const data = await response.json();
@@ -69,10 +69,9 @@ const ColumnsTable = (props) => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchHistoryData(); // To initially fetch all history data
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [file]);
+  useEffect(() => {
+    fetchHistoryData(); // To initially fetch all history data
+  }, [file]);
 
   // Calculate the totals for each type of damage
   useEffect(() => {
@@ -128,7 +127,7 @@ const ColumnsTable = (props) => {
                   <th
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     key={index}
-                    className="border-b border-gray-200 pr-14 pb-[10px] text-start dark:!border-navy-700"
+                    className="border-b border-gray-200 pb-[10px] pr-14 text-start dark:!border-navy-700"
                   >
                     <div className="flex w-full justify-between pr-10 text-xs tracking-wide text-gray-600">
                       {column.render("Header")}
@@ -140,22 +139,22 @@ const ColumnsTable = (props) => {
           </thead>
           <tbody {...getTableBodyProps()}>
             <tr>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="text-sm font-bold text-navy-700 dark:text-white">
                   1
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   Lubang
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   {totalLubang}%
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={beforeDetection} type="video/mp4" />
@@ -170,7 +169,7 @@ const ColumnsTable = (props) => {
                   />
                 )}
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={afterDetection} type="video/mp4" />
@@ -187,22 +186,22 @@ const ColumnsTable = (props) => {
               </td>
             </tr>
             <tr>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="text-sm font-bold text-navy-700 dark:text-white">
                   2
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   Retak Memanjang
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   {totalRetakMemanjang}%
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={beforeDetection} type="video/mp4" />
@@ -217,7 +216,7 @@ const ColumnsTable = (props) => {
                   />
                 )}
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={afterDetection} type="video/mp4" />
@@ -234,22 +233,22 @@ const ColumnsTable = (props) => {
               </td>
             </tr>
             <tr>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="text-sm font-bold text-navy-700 dark:text-white">
                   3
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   Retak Melintang
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   {totalRetakMelintang}%
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={beforeDetection} type="video/mp4" />
@@ -264,7 +263,7 @@ const ColumnsTable = (props) => {
                   />
                 )}
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={afterDetection} type="video/mp4" />
@@ -281,22 +280,22 @@ const ColumnsTable = (props) => {
               </td>
             </tr>
             <tr>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="text-sm font-bold text-navy-700 dark:text-white">
                   4
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   Retak Buaya
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
                   {totalRetakBuaya}%
                 </p>
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={beforeDetection} type="video/mp4" />
@@ -311,7 +310,7 @@ const ColumnsTable = (props) => {
                   />
                 )}
               </td>
-              <td className="pt-[10px] pb-[20px] sm:text-[14px]">
+              <td className="pb-[20px] pt-[10px] sm:text-[14px]">
                 {isVideo && (
                   <video width="150" height="240" controls>
                     <source src={afterDetection} type="video/mp4" />

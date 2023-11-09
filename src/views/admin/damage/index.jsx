@@ -6,6 +6,7 @@ import MemanjangDetail from "components/card/MemanjangDetail";
 import MelintangDetail from "components/card/MelintangDetail";
 import BuayaDetail from "components/card/BuayaDetail";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Marketplace = () => {
   const [historyData, setHistoryData] = useState([]);
@@ -25,18 +26,26 @@ const Marketplace = () => {
   const fetchHistoryData = async () => {
     try {
       const url = file
-        ? `https:/localhost3001/get-history?fileName=${file}`
-        : "https:/localhost3001/get-history";
-      console.log(url);
-      const response = await fetch(url);
-      const data = await response.json();
-      setHistoryData(data);
+        ? `https://testingapirdd.x-camp.id/get-history?fileName=${file}`
+        : "https://testingapirdd.x-camp.id/get-history";
+      axios
+        .get(url)
+        .then((res) => {
+          const data = res.data;
+          console.log(data);
+          setHistoryData(data);
+        })
+        .catch((error) => {
+          console.error("Error in fetching last history:", error);
+        });
     } catch (error) {
       console.error("Error fetching history data:", error);
     }
   };
 
- 
+  useEffect(() => {
+    fetchHistoryData(); // To initially fetch all history data
+  }, [file]);
 
   // Calculate the totals for each type of damage
   useEffect(() => {
