@@ -61,7 +61,6 @@ const ColumnsTable = (props) => {
         .get(url)
         .then((res) => {
           const data = res.json();
-          console.log(data);
           setHistoryData(data);
         })
         .catch((error) => {

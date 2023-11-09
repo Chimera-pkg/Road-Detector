@@ -42,6 +42,7 @@ const ColumnsTable = (props) => {
   const [totalRetakBuaya, setTotalRetakBuaya] = useState(0);
   const [beforeDetection, setBeforeDetection] = useState("");
   const [afterDetection, setAfterDetection] = useState("");
+  const [damageList, setDamageList] = useState([]);
   const [namaFile, setNamaFile] = useState("");
 
   // Function to parse the URL and extract the "file" query parameter
@@ -60,7 +61,6 @@ const ColumnsTable = (props) => {
 
           `https://testingapirdd.x-camp.id/get-history?fileName=${file}`
         : "https://testingapirdd.x-camp.id/get-history";
-      console.log(url);
       const response = await fetch(url);
       const data = await response.json();
       setHistoryData(data);
